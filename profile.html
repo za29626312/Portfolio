@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人資料</title>
+    <style>
+        body {
+            margin: 0; /* 設定頁面邊距 */
+            font-family: Arial, sans-serif; /* 設定字體 */
+            background-color: #111; /* 設定背景顏色 */
+            color: #fff; /* 設定文字顏色 */
+            display: flex; /* 使用flexbox佈局 */
+            height: 100vh; /* 設定頁面高度 */
+            text-align: left; /* 設定文字對齊方式 */
+            position: relative; /* 設定定位方式 */
+        }
+        .menu {
+            position: fixed; /* 固定位置 */
+            top: 0; /* 距離頂部0 */
+            left: -200px; /* 距離左邊-200px */
+            width: 200px; /* 設定寬度 */
+            height: 100%; /* 設定高度 */
+            background: rgba(200, 200, 200, 0.8); /* 設定背景顏色和透明度 */
+            padding: 20px; /* 設定內距 */
+            border-radius: 0 20px 20px 0; /* 設定邊角圓滑 */
+            transition: left 0.3s; /* 設定過渡效果 */
+            z-index: 2; /* 設定層級 */
+        }
+        .menu a {
+            display: block; /* 設定為區塊元素 */
+            color: #000000; /* 設定文字顏色 */
+            text-decoration: none; /* 去除文字裝飾 */
+            margin: 30px 0; /* 設定外距 */
+            font-size: 32px; /* 設定字體大小 */
+        }
+        .menu a:hover {
+            text-decoration: underline; /* 滑鼠懸停時添加下劃線 */
+        }
+        .hover-area {
+            position: fixed; /* 固定位置 */
+            top: 0; /* 距離頂部0 */
+            left: 0; /* 距離左邊0 */
+            width: 20px; /* 設定寬度 */
+            height: 100%; /* 設定高度 */
+            z-index: 3; /* 設定層級 */
+        }
+        .hover-area:hover + .menu {
+            left: 0; /* 滑鼠懸停時顯示選單 */
+        }
+        .menu:hover {
+            left: 0; /* 滑鼠懸停時顯示選單 */
+        }
+        .content {
+            display: flex; /* 使用flexbox佈局 */
+            flex-direction: column; /* 設定為列方向 */
+            align-items: flex-start; /* 項目對齊到起始位置 */
+            justify-content: center; /* 項目在主軸上居中 */
+            flex: 1; /* 允許內容擴展 */
+            padding: 20px; /* 設定內距 */
+            position: relative; /* 設定定位方式 */
+        }
+        .content h1 {
+            font-size: 100px; /* 設定字體大小 */
+            margin-bottom: 10px; /* 設定下邊距 */
+            margin-left: 80px; /* 設定左邊距 */
+        }
+        .content p {
+            max-width: 100%; /* 設定最大寬度 */
+            padding: 30px; /* 設定內距 */
+            margin: 70px 0 0px 180px; /* 設定外距 */
+            border-radius: 100px; /* 設定邊角圓滑 */
+            text-align: center; /* 設定文字對齊方式 */
+            position: relative; /* 設定定位方式 */
+            z-index: 2; /* 設定層級 */
+            font-size: 12px; /* 設定字體大小 */
+            line-height: 2.8em; /* 設定行高 */
+        }
+        .pen-image {
+            position: absolute; /* 設定絕對定位 */
+            left: 50px; /* 距離左邊50px */
+            top: 230px; /* 距離頂部230px */
+            height: 550px; /* 設定高度 */
+        }
+        .overlay {
+            position: absolute; /* 設定絕對定位 */
+            top: 260px; /* 距離頂部260px */
+            left: 520px; /* 距離左邊520px */
+            width: 65%; /* 設定寬度 */
+            height: 550px; /* 設定高度 */
+            background-color: rgba(200, 200, 200, 0.8); /* 設定背景顏色和透明度 */
+            z-index: 5; /* 設定層級 */
+            transition: opacity 0.5s ease; /* 設定過渡效果 */
+        }
+        .overlay:hover {
+            opacity: 0.1; /* 滑鼠懸停時透明度降低 */
+        }
+        .text-content {
+            position: absolute; /* 設定絕對定位 */
+            top: 260px; /* 距離頂部260px */
+            left: 520px; /* 距離左邊520px */
+            width: 65%; /* 設定寬度 */
+            height: 550px; /* 設定高度 */
+            z-index: 4; /* 設定層級 */
+            color: #fff; /* 設定文字顏色 */
+        }
+        .text-content p {
+            margin: -25px 0; /* 設定上下外距 */
+            font-size: 25px; /* 設定字體大小 */
+            text-align: left; /* 文字靠左對齊 */
+        }
+    </style>
+</head>
+<body>
+    <div class="hover-area"></div>
+    <div class="menu">
+        <a href="profile.html">個人資料</a>
+        <a href="portfolio.html">作品集</a>
+        <a href="experience.html">經歷</a>
+        <a href="#">技能</a>
+        <a href="#">學歷</a>
+        <a href="#">證照</a>
+        <a href="#">自傳</a>
+    </div>
+    <div class="content">
+        <h1>struggle</h1>
+        <p style="text-align: center;"> <!-- 文字居中對齊 -->
+            The term 'struggle' has layers of meaning,<br>
+            not only encompassing the act of struggling<br>
+            but also the broader concepts of conflict<br>
+            and hardship. This becomes particularly<br>
+            poignant when comparing the struggles<br>
+            faced by the rich and the poor.<br>
+            For the wealthy, their struggles are likened<br>
+            to being in a misty cloud; they have the luxury<br>
+            to choose whether to soar high or to rest leisurely.<br>
+            Even in their hardest efforts, they remain cushioned<br>
+            in their cloud-like environment. This metaphor<br>
+            contrasts sharply with the more stark and often<br>
+            harsh realities faced by the poor in their struggles.<br>
+            It underscores that although the word 'struggle'<br>
+            is used for both, the experiences are vastly different.
+        </p>
+        <img src="tech-design-portfolio/7_工作區域 1.png" alt="Pen Image" class="pen-image">
+        <div class="overlay"></div> <!-- 灰色區域 -->
+        <div class="text-content">
+            <p>姓名: 林吳爵</p>
+            <p>生日: 12/06</p>
+            <p>聯絡地址: 新北市中和</p>
+            <p>聯絡電話: 0933760899</p>
+            <p>常用郵件: za29626312@gmail.com</p>
+        </div> <!-- 個人資料文字 -->
+    </div>
+</body>
+</html>

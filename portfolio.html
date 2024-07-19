@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Design 作品集</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            height: 100vh;
+            text-align: left;
+            position: relative;
+        }
+        .menu {
+            position: fixed;
+            top: 0;
+            left: -200px;
+            width: 200px;
+            height: 100%;
+            background: rgba(200, 200, 200, 0.8);
+            padding: 20px;
+            border-radius: 0 20px 20px 0;
+            transition: left 0.3s;
+            z-index: 5;
+        }
+        .menu a {
+            display: block;
+            color: #000000;
+            text-decoration: none;
+            margin: 30px 0;
+            font-size: 32px;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+        .hover-area {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 100%;
+            z-index: 6;
+        }
+        .hover-area:hover + .menu {
+            left: 0;
+        }
+        .menu:hover {
+            left: 0;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            padding: 20px;
+            position: relative;
+        }
+        .content img {
+            max-height: 150%;
+            max-width: 150%;
+            opacity: 0.2;
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .content p {
+            max-width: 70%;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .pen-top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 450px;
+            height: auto;
+        }
+        .pen-bottom-right {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 100px;
+            height: auto;
+        }
+        .icon {
+            position: absolute;
+            bottom: -120px;
+            width: 150px;
+            height: 150px;
+            transition: transform 0.3s;
+            z-index: 4;
+        }
+        .icon:hover {
+            transform: translateY(-20px);
+        }
+        .icon-1 { left: 150px; }
+        .icon-2 { left: 300px; }
+        .icon-3 { left: 450px; }
+        .icon-4 { left: 600px; }
+        .icon-5 { left: 750px; }
+        .icon-6 { left: 900px; }
+        .icon-7 { left: 1050px; }
+        .icon-8 { left: 1200px; }
+        .icon-9 { left: 1300px; }
+    </style>
+</head>
+<body>
+    <div class="hover-area"></div>
+    <div class="menu">
+        <a href="profile.html">個人資料</a>
+        <a href="portfolio.html">作品集</a>
+        <a href="experience.html">經歷</a>
+        <a href="#">技能</a>
+        <a href="#">學歷</a>
+        <a href="#">證照</a>
+        <a href="#">自傳</a>
+    </div>
+    <div class="content">
+        <img src="tech-design-portfolio/2_工作區域 1.png" alt="Profile Picture">
+        <p>In the dimension of design, every concept is an investment in the future. This portfolio showcases cutting-edge creative experiments and visual solutions realized, with each page embodying the synthesis of innovation and detail. Explore this collection to perceive the infinite possibilities where design intersects with technology.</p>
+    </div>
+    <img src="tech-design-portfolio/4-01.png" alt="Pen Top Right" class="pen-top-right">
+    <img src="tech-design-portfolio/3-01.png" alt="Pen Bottom Right" class="pen-bottom-right">
+    <img src="tech-design-portfolio/5-01.png" alt="Icon 1" class="icon icon-1">
+    <img src="tech-design-portfolio/5-02.png" alt="Icon 2" class="icon icon-2">
+    <img src="tech-design-portfolio/5-03.png" alt="Icon 3" class="icon icon-3">
+    <img src="tech-design-portfolio/5-04.png" alt="Icon 4" class="icon icon-4">
+    <img src="tech-design-portfolio/5-05.png" alt="Icon 5" class="icon icon-5">
+    <img src="tech-design-portfolio/5-06.png" alt="Icon 6" class="icon icon-6">
+    <img src="tech-design-portfolio/5-07.png" alt="Icon 7" class="icon icon-7">
+    <img src="tech-design-portfolio/5-08.png" alt="Icon 8" class="icon icon-8">
+    <img src="tech-design-portfolio/5-09.png" alt="Icon 9" class="icon icon-9">
+</body>
+</html>
